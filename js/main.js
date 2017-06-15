@@ -7,7 +7,7 @@ var cargarPagina = function() {
   cargarFormulario();
   cargarTemas(); //
   var botonBuscar= $("#boton-buscar");
-  //botonBuscar.click(buscarTema);
+  botonBuscar.click(function(){alert("estoy buscando...");});
 }
 
 var cargarTemas = function() {
