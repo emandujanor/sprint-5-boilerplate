@@ -2,43 +2,44 @@
 
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Foro de opinión</h1>
-    <h5>Agrega aquí el tema de tu interés, o publica respuestas a tus temas favoritos. Nos interesa conocer tu opinión</h5>
-    <button type="button" id="crearTema">Ingresa un Tema</button>
-    <p></p>
-    <!--Aqui comienza el formulario que está oculto-->
-    <div id="formCrearTema">
-      <form action="post">
-        <input type="text" name="nombre" id="autor" placeholder="Nombre"></input><br><br>
-        <textarea name="message" id="tema" rows="5" cols="30" placeholder="Escribe tu Tema aqui"></textarea><br><br>
-        <button type="button" id="nuevoTema">Enviar Tema</button>
-      </form>
-    </div>
-    <!--Aqui termina el formulario que está oculto-->
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>Foro de opinión</h1>
+  <h5>Agrega aquí el tema de tu interés, o publica respuestas a tus temas favoritos. Nos interesa conocer tu opinión</h5>
+  <button type="button" id="crearTema">Ingresa un Tema</button>
+  <p></p>
+  <!--Aqui comienza el formulario que está oculto-->
+  <div id="formCrearTema">
+    <form action="post">
+      <input type="text" name="nombre" id="autor" placeholder="Nombre"></input><br><br>
+      <textarea name="message" id="tema" rows="5" cols="30" placeholder="Escribe tu Tema aqui"></textarea><br><br>
+      <button type="button" id="nuevoTema">Enviar Tema</button>
+    </form>
+  </div>
+  <!--Aqui termina el formulario que está oculto-->
+  <h1>Temas</h1>
+  <table class="tabla">
+    <thead>
+      <th>Tema</th>
+      <th>Autor</th>
+      <th>Respuestas</th>
+    </thead>
+    <tbody id="lista-temas"></tbody>
+  </table>
 
 
-    <h1>Temas</h1>
-    <table class="tabla">
-  <thead>
-    <th>Tema</th>
-    <th>Autor</th>
-    <th>Respuestas</th>
-  </thead>
-  <tbody id="lista-temas"></tbody>
-</table>
 
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
+  <script src="js/functions.js"></script>
+  <script src="js/main.js"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</body>
 
-    <script src="js/functions.js"></script>
-    <script src="js/main.js"></script>
-
-  </body>
 </html>
