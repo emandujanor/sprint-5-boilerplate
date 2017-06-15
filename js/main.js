@@ -41,45 +41,6 @@ var crearTemas= function(tema){
 
 };
 
-/*request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
-
-request.send();*/
-
-
-
-
-
-
-var crearTema = function (topics) {
-  var nombre = topics.author_name;
-  var tema = topics.content[0];
-  var id= topics.id;
-  var respuestas= topics.responses_count;
-  console.log("nombre " +nombre);
-  console.log("tema " +tema);
-  console.log("id " + id);
-  console.log("respuesta " +respuestas);
-
-/*  // creamos la fila
-  var $tr = $("<tr />");
-  // creamos la celda del nombre
-  var $nombreTd = $("<td />");
-  $nombreTd.text(nombre);
-  // creamos la celda del estado
-  var $estadoTd = $("<td />");
-  $estadoTd.text(estado);
-  // agregamos las celdas a la fila
-  $tr.append($nombreTd);
-  $tr.append($estadoTd);
-  // agregamos filas a la tabla
-  $tasksList.append($tr);*/
-};
 
 var mostrarTemas = function (){
   console.log(api.url);
