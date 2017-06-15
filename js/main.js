@@ -1,26 +1,38 @@
 var api = {
   url: 'http://examen-laboratoria-sprint-5.herokuapp.com/topics/'
 };
-var contadorTemas = 0;
+var contadorTemas = 0; //Se utiliza el contador para generar el ID de mi nuevo tema
+var todosLosTemas= [ ];
 var cargarPagina = function() {
   cargarFormulario();
   cargarTemas(); //
+  var botonBuscar= $("#boton-buscar");
+  //botonBuscar.click(buscarTema);
 }
 
 var cargarTemas = function() {
   $.getJSON(api.url, function(response) {
     response.forEach(mostrarTemas);
+    todosLosTemas= response;
   });
 }
+
+/* var buscarTema = function(event) {
+  event.preventDefault();
+  console.log("estoy filtrando");
+  var filtro = $("#busqueda").val().toLowerCase();
+  var temasFiltrados = todosLosTemas.filter(function(tema) {
+    return tema.author_name.toLowerCase().indexOf(filtro) >= 0;
+  });
+  mostrarTemas(temasFiltrados);*/
+
+
 var mostrarTemas = function(tema) {
   var contenido = tema.content;
   var autor = tema.author_name;
   var id = tema.id;
   var respuestas = tema.responses_count;
   contadorTemas += 1;
-
-  //console.log("nombre: "+ autor+ "id: " + id);
-
   // creamos la fila
   var $tr = $("<tr class='tema_fila'></tr>");
   // creamos la celda del tema
@@ -70,6 +82,7 @@ var agregarTema = function(e) {
     $("#formCrearTema").hide();
   });
 };
+
 
 
 
